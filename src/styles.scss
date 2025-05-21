@@ -12,3 +12,15 @@ body {
   background-color: var(--dark);
   color: var(--text-light);
 }
+
+
+/* styles.css o global styles */
+html, body {
+  overflow-y: scroll;
+  scrollbar-width: none; /* Firefox */
+}
+
+html::-webkit-scrollbar,
+body::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Edge */
+}

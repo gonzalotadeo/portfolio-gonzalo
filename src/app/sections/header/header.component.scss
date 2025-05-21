@@ -69,6 +69,11 @@
   text-align: center;
   padding: 4rem 1rem;
   height: 100vh;
+  overflow-y: scroll;
+  scrollbar-width: none; /* Firefox */
+}
+.header::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Edge */
 }
 
 .header h1 {
@@ -89,4 +94,7 @@
   font-size: 0.8rem;
   opacity: 0.8;
 }
+
+
+
 

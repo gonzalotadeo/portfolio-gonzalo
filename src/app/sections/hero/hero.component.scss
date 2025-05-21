@@ -1,13 +1,23 @@
-
 .about {
   background-color: #0f172a;
   color: #f8fafc;
   text-align: center;
   padding: 3rem 2rem;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.about-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .about .highlight {
   color: #f87171;
+  display: block;
 }
 
 .about p {
@@ -15,4 +25,10 @@
   margin: 1rem auto;
   font-size: 0.95rem;
   line-height: 1.5;
+}
+
+h2 {
+  font-size: 5.5rem;
+ line-height: 1;
+ margin-bottom: 5px;;
 }

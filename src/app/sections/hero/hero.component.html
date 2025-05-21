@@ -1,8 +1,49 @@
+<section class="section about" id="aboutSection">
+  <div class="lines left-lines"></div>
+  <div class="about-content">
+    <h2><span class="highlight">FULL-STACK</span> DEVELOPER</h2>
+    <p>
+      Lorem <strong>ipsum</strong> dolor sit amet, consectetur adipiscing elit...
+    </p>
+  </div>
+  <div class="lines right-lines"></div>
+  <script>
+  // Crea 9 líneas con opacidad decreciente
+  function createLines(container) {
+    const count = 9;
+    for (let i = 0; i < count; i++) {
+      const line = document.createElement('div');
+      line.classList.add('line');
+      // Opacidad: desde 1 en los bordes hasta 0.1 hacia el centro
+      const maxOpacity = 1;
+      const minOpacity = 0.1;
+      const center = Math.floor(count / 2);
+      const distance = Math.abs(i - center);
+      const opacity = maxOpacity - (distance / center) * (maxOpacity - minOpacity);
+      line.style.opacity = opacity.toFixed(2);
+      container.appendChild(line);
+    }
+  }
 
-<section class="section about">
-  <h2><span class="highlight">FULL-STACK</span> DEVELOPER</h2>
-  <p>
-    Lorem <strong>ipsum</strong> dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-    Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis.
-  </p>
+  // Inyectar líneas en los dos contenedores
+  const leftContainer = document.querySelector('.left-lines');
+  const rightContainer = document.querySelector('.right-lines');
+  createLines(leftContainer);
+  createLines(rightContainer);
+
+  // Detectar scroll con IntersectionObserver
+  const section = document.getElementById('aboutSection');
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        section.classList.add('visible');
+      } else {
+        section.classList.remove('visible');
+      }
+    });
+  }, { threshold: 0.3 });
+
+  observer.observe(section);
+</script>
+
 </section>
