@@ -1,0 +1,41 @@
+.stack {
+  background-color: #0f172a;
+  padding: 3rem 2rem;
+  color: #fff;
+  text-align: center;
+}
+
+.stack h2 {
+  margin-bottom: 2rem;
+  color: #f87171;
+}
+
+.stack-group {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.stack-box {
+  background-color: #dc2626;
+  padding: 1rem 1.5rem;
+  border-radius: 8px;
+  min-width: 200px;
+}
+
+.stack-box h3 {
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+}
+
+.stack-box ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.stack-box li {
+  margin: 0.25rem 0;
+}
