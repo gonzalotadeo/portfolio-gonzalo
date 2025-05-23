@@ -110,3 +110,38 @@ li{font-size: 15px;
   font-family: 'roboto', sans-serif;
   color: #fff;
 font-weight: bold ;}
+
+
+
+.section.stack {
+  position: relative; /* 🔑 Esto es lo que encierra la posición absoluta dentro de este componente */
+  overflow: hidden;   /* Esto evita que se vea fuera */
+}
+
+.gear-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 50vw;
+  overflow: hidden;
+
+}
+
+.gear {
+  height: 100vh;
+  width: auto;
+  animation: spin 20s linear infinite;
+  transform-origin: center center;
+  position: absolute;
+  left: -45%;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
