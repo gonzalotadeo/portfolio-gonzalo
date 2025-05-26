@@ -4,7 +4,7 @@ import { HeroComponent } from '../sections/hero/hero.component';
 import { ProjectsComponent } from '../sections/projects/projects.component';
 import { StackComponent } from '../sections/stack/stack.component';
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
-
+import { TrabajosComponent } from '../sections/trabajos/trabajos.component';
 @Component({
   selector: 'app-home',
   standalone: true, // 👈 necesario en standalone
@@ -12,8 +12,9 @@ import { MatSlideToggleModule } from '@angular/material/slide-toggle';
     HeaderComponent,
     HeroComponent,
     ProjectsComponent,
-    MatSlideToggleModule
-  ],    // aquí puedes añadir otros componentes si los necesitas
+    MatSlideToggleModule,
+    TrabajosComponent
+],    // aquí puedes añadir otros componentes si los necesitas
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.scss'] // 👈 en plural y como array
 })

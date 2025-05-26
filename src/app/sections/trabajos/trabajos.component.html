@@ -1,0 +1,43 @@
+<div class="contenedor-trabajos">
+  <h1 class="titulo">Proyectos</h1>
+  <div class="lista-trabajos-contenedor">
+    <ol class="lista-trabajos">
+
+      <li class="trabajo" (click)="toggleDescripcion(0)">
+        <h2 class="titulo-trabajos">APLICACIÓN METEOROLÓGICA</h2>
+        <p class="descripcion-trabajo" *ngIf="descripcionVisible[0]">
+          Aplicación meteorológica que recoge los datos de una API y los procesa para mostrar información según la ubicación del dispositivo.
+        </p>
+        <ul class="tecnologias-trabajo" *ngIf="descripcionVisible[0]">
+          <li class="tecnologia">Spring Boot</li>
+          <li class="tecnologia">API Rest</li>
+          <li class="tecnologia">Angular</li>
+        </ul>
+      </li>
+
+      <li class="trabajo" (click)="toggleDescripcion(1)">
+        <h2 class="titulo-trabajos">APLICACIÓN 2</h2>
+        <p class="descripcion-trabajo" *ngIf="descripcionVisible[1]">
+          Otra app distinta...
+        </p>
+        <ul class="tecnologias-trabajo" *ngIf="descripcionVisible[1]">
+          <li class="tecnologia">Node.js</li>
+          <li class="tecnologia">Express</li>
+          <li class="tecnologia">MongoDB</li>
+        </ul>
+      </li>
+
+      <li class="trabajo" (click)="toggleDescripcion(2)">
+        <h2 class="titulo-trabajos">APLICACIÓN 3</h2>
+        <p class="descripcion-trabajo" *ngIf="descripcionVisible[2]">
+          Una tercera app...
+        </p>
+        <ul class="tecnologias-trabajo" *ngIf="descripcionVisible[2]">
+          <li class="tecnologia">Python</li>
+          <li class="tecnologia">Django</li>
+        </ul>
+      </li>
+
+    </ol>
+  </div>
+</div>
