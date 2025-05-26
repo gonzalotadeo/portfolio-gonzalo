@@ -1,10 +1,11 @@
-/* styles.css o global styles */
-html, body {
+.scroll-container {
+  height: 100vh;
   overflow-y: scroll;
-  scrollbar-width: none; /* Firefox */
+  scroll-snap-type: y mandatory;
+  scroll-behavior: smooth;
 }
 
-html::-webkit-scrollbar,
-body::-webkit-scrollbar {
-  display: none; /* Chrome, Safari, Edge */
+.scroll-container > * {
+  height: 100vh;
+  scroll-snap-align: start;
 }

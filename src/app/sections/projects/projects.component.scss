@@ -8,6 +8,7 @@
   padding: 2rem;
   box-sizing: border-box;
   gap: 2rem; /* Added gap to space title and cards-wrapper */
+  
 }
 
 .cards-wrapper {
@@ -116,6 +117,7 @@ font-weight: bold ;}
 .section.stack {
   position: relative; /* 🔑 Esto es lo que encierra la posición absoluta dentro de este componente */
   overflow: hidden;   /* Esto evita que se vea fuera */
+  scroll-snap-align: start; 
 }
 
 .gear-container {
