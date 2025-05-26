@@ -1,0 +1,89 @@
+.contenedor-trabajos {
+  background-color: #0f172a;
+  color: #f8fafc;
+  text-align: center;
+  
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  scroll-snap-align: start;
+
+}
+
+.titulo {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  text-align: left;
+  color: #ac4e48;
+}
+.titulo-trabajos {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  text-align: left;
+  color: #f1e7d1;
+}
+.tecnologias-trabajo {
+ list-style: none;        /* Quita los puntos de lista */
+  padding: 0;
+  display: flex;           /* Coloca los <li> en línea */
+  gap: 0.5rem;    
+}
+
+.lista-trabajos {
+
+  list-style: none; /* Quita la numeración por defecto */
+  counter-reset: trabajo-counter;
+  padding: 0;
+  margin: 0;
+}
+
+.lista-trabajos li.trabajo {
+  counter-increment: trabajo-counter;
+  position: relative;
+  margin-bottom: 2rem;
+  padding-left: 2.5rem; /* Espacio para el número */
+  font-size: 1rem;   /* Texto más pequeño */
+}
+
+.lista-trabajos li.trabajo::before {
+  content: counter(trabajo-counter, decimal-leading-zero); /* 01, 02, 03 */
+  position: absolute;
+  left: 0;
+  top: 0;
+  font-weight: bold;
+  color: #f1e7d1;
+  font-size: 1rem;
+}
+
+.tecnologia {
+  background-color: #1a222e;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 0.9rem;
+}
+
+
+
+.trabajo{
+    text-align: left;
+ padding-bottom: 2rem;
+transition: all 0.3s ease;}
+
+.trabajo::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 2px;
+  background-color: #f1e7d1;
+  width: 0;
+  transition: width 0.5s ease-in-out;
+}
+
+.trabajo:hover::after {
+  width: 100%;
+}
