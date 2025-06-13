@@ -1,0 +1,59 @@
+/* src/app/home/home.component.css */
+.projects {
+  background-color: #0f172a;
+  color: #f8fafc;
+  padding: 3rem 2rem;
+  text-align: center;
+}
+
+.projects h2 {
+  color: #f87171;
+  margin-bottom: 2rem;
+}
+
+.projects-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.projects-list {
+  flex: 1 1 300px;
+  max-width: 500px;
+}
+
+.project-item {
+  display: flex;
+  align-items: baseline;
+  margin-bottom: 1.5rem;
+  border-bottom: 1px solid #475569;
+  padding-bottom: 0.5rem;
+}
+
+.project-number {
+  color: #f87171;
+  font-weight: bold;
+  font-size: 1rem;
+  width: 3rem;
+}
+
+.project-info h3 {
+  margin: 0;
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.project-info p {
+  margin: 0.25rem 0 0;
+  font-size: 0.85rem;
+  color: #94a3b8;
+}
+
+.project-preview {
+  background-color: #dc2626;
+  width: 250px;
+  height: 300px;
+  border-radius: 8px;
+  flex-shrink: 0;
+}
