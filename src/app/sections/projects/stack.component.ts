@@ -1,23 +1,15 @@
-import { Component, NgModule } from '@angular/core';
-import { MatCardModule } from '@angular/material/card';
-
-@NgModule({
-  imports: [
-    MatCardModule,
-    // otros módulos
-  ],
-})
-export class AppModule { }
-
+import { NgFor } from '@angular/common';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-stack',
-  imports: [],
+  imports: [NgFor],
   standalone: true, // 👈 necesario en standalone
   templateUrl: './stack.component.html',
   styleUrl: './stack.component.scss'
 })
 export class StackComponent {
+projects: any;
 
 }
 // src/app/home/home.component.ts

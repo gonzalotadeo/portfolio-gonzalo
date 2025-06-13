@@ -1,49 +1,12 @@
-<section class="section about" id="aboutSection">
-  <div class="lines left-lines"></div>
+<section class="section about">
   <div class="about-content">
+    <div class="contenedor-foto">
+      <img src="img/foto-gonzalo.png" alt="Foto Gonzalo" class="foto-perfil">
+    </div>
     <h2><span class="highlight">FULL-STACK</span> DEVELOPER</h2>
     <p>
-      Lorem <strong>ipsum</strong> dolor sit amet, consectetur adipiscing elit...
+      Desarrollador de aplicaciones web enfocado tanto en <strong>frontend</strong> como en <strong>backend</strong>. Actualmente 
+      me estoy centrando en Spring Boot y Angular para crear aplicaciones, ya que son dos de las tecnolgías más demandadas por el mercado.
     </p>
   </div>
-  <div class="lines right-lines"></div>
-  <script>
-  // Crea 9 líneas con opacidad decreciente
-  function createLines(container) {
-    const count = 9;
-    for (let i = 0; i < count; i++) {
-      const line = document.createElement('div');
-      line.classList.add('line');
-      // Opacidad: desde 1 en los bordes hasta 0.1 hacia el centro
-      const maxOpacity = 1;
-      const minOpacity = 0.1;
-      const center = Math.floor(count / 2);
-      const distance = Math.abs(i - center);
-      const opacity = maxOpacity - (distance / center) * (maxOpacity - minOpacity);
-      line.style.opacity = opacity.toFixed(2);
-      container.appendChild(line);
-    }
-  }
-
-  // Inyectar líneas en los dos contenedores
-  const leftContainer = document.querySelector('.left-lines');
-  const rightContainer = document.querySelector('.right-lines');
-  createLines(leftContainer);
-  createLines(rightContainer);
-
-  // Detectar scroll con IntersectionObserver
-  const section = document.getElementById('aboutSection');
-  const observer = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        section.classList.add('visible');
-      } else {
-        section.classList.remove('visible');
-      }
-    });
-  }, { threshold: 0.3 });
-
-  observer.observe(section);
-</script>
-
-</section>
+</section> 

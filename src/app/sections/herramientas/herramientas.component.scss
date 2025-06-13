@@ -1,0 +1,149 @@
+.container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column; /* Changed to column */
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, #d4aaff, #ffb6d9);
+  padding: 2rem;
+  box-sizing: border-box;
+  gap: 2rem; /* Added gap to space title and cards-wrapper */
+  
+}
+
+.cards-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  align-items: center;
+  width: 100%; /* Ensure it takes full width to center content */
+  max-width: 600px; /* Limit width as before */
+}
+
+.stack-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  /* margin-bottom: 3rem; Removed, spacing handled by container gap */
+  color: white;
+  width: 100%; /* Ensure the title card takes full width */
+  max-width: 600px; /* Match max-width of other cards for alignment */
+}
+
+.card {
+  padding: 2rem 3rem;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 8px 32px rgba(31, 38, 135, 0.2);
+  color: #fff;
+  text-align: center;
+  width: 100%;
+  max-width: 600px;
+
+  opacity: 0;
+  transform: translateX(100vw);
+  transition: transform 1s ease, opacity 1s ease;
+  will-change: transform, opacity;
+}
+
+.card.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+.card:nth-child(1) { transition-delay: 0.1s; }
+.card:nth-child(2) { transition-delay: 0.3s; }
+.card:nth-child(3) { transition-delay: 0.5s; } /* para small-card 1 */
+.card:nth-child(4) { transition-delay: 0.7s; } /* para small-card 2 */
+
+.small-cards {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  width: 100%;
+  max-width: 600px;
+}
+
+.small-card {
+  flex: 0 1 40%;
+  padding: 1.5rem 2rem;
+}
+
+.especialidad-contenedor {
+  margin-bottom: 1.5rem;
+}
+
+.especialidad {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.tecnologias {
+  display: flex;
+  justify-content: center;
+}
+
+.tecnologias-lista {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.tecnologia {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 1.2rem;
+  color: white;
+}
+
+.tecnologia img {
+  width: 24px;
+  height: 24px;
+}
+
+li{font-size: 15px;
+  font-family: 'roboto', sans-serif;
+  color: #fff;
+font-weight: bold ;}
+
+
+
+.section.stack {
+  position: relative; /* 🔑 Esto es lo que encierra la posición absoluta dentro de este componente */
+  overflow: hidden;   /* Esto evita que se vea fuera */
+  scroll-snap-align: start; 
+}
+
+.gear-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 50vw;
+  overflow: hidden;
+
+}
+
+.gear {
+  height: 100vh;
+  width: auto;
+  animation: spin 20s linear infinite;
+  transform-origin: center center;
+  position: absolute;
+  left: -45%;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
