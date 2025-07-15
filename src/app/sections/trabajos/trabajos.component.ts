@@ -9,7 +9,7 @@ import { NgIf } from '@angular/common';
   styleUrls: ['./trabajos.component.scss']
 })
 export class TrabajosComponent {
-  descripcionVisible: boolean[] = [false, false, false]; // Uno por cada <li>
+  descripcionVisible: boolean[] = [false, false, false]; 
 
   toggleDescripcion(index: number): void {
     this.descripcionVisible[index] = !this.descripcionVisible[index];

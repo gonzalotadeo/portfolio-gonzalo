@@ -3,38 +3,52 @@
   <div class="lista-trabajos-contenedor">
     <ol class="lista-trabajos">
 
-      <li class="trabajo" (click)="toggleDescripcion(0)">
-        <h2 class="titulo-trabajos">APLICACIÓN METEOROLÓGICA</h2>
-        <p class="descripcion-trabajo" *ngIf="descripcionVisible[0]">
-          Aplicación meteorológica que recoge los datos de una API y los procesa para mostrar información según la ubicación del dispositivo.
+      <li class="trabajo" >
+        <h2 class="titulo-trabajos">Weather App</h2>
+        <p class="descripcion-trabajo" >
+         Aplicación meteorológica que obtiene datos usando API Rest para mostrar el tiempo actual, la previsión por horas y la de los próximos días. 
+         <br>Gracias a SpringBoot, cuenta con un sistema de cache para evitar llamadas innecesarias a la API.
         </p>
-        <ul class="tecnologias-trabajo" *ngIf="descripcionVisible[0]">
+        <ul class="tecnologias-trabajo" >
           <li class="tecnologia">Spring Boot</li>
-          <li class="tecnologia">API Rest</li>
           <li class="tecnologia">Angular</li>
+          <li class="tecnologia">Java</li>
+          <li class="tecnologia">TypeScript</li>
+          <li class="tecnologia">Html5</li>
+          <li class="tecnologia">CSS3</li>
+          <li class="tecnologia">JSON</li>
+          <li class="tecnologia">API Rest</li>
+          
         </ul>
       </li>
 
-      <li class="trabajo" (click)="toggleDescripcion(1)">
-        <h2 class="titulo-trabajos">APLICACIÓN 2</h2>
-        <p class="descripcion-trabajo" *ngIf="descripcionVisible[1]">
-          Otra app distinta...
+      <li class="trabajo" >
+        <h2 class="titulo-trabajos">Food Go</h2>
+        <p class="descripcion-trabajo">
+         Aplicación para crear y gestionar recetas de cocina mediante base de datos y operaciones CRUD. 
+         <br>Cuenta también con sistema de registro, autenticación de usuarios, y sistema de roles para administrar usuarios premium, editores y normales. 
         </p>
-        <ul class="tecnologias-trabajo" *ngIf="descripcionVisible[1]">
-          <li class="tecnologia">Node.js</li>
-          <li class="tecnologia">Express</li>
-          <li class="tecnologia">MongoDB</li>
+        <ul class="tecnologias-trabajo">
+          <li class="tecnologia">XAMPP</li>
+          <li class="tecnologia">MySql</li>
+          <li class="tecnologia">PHP</li>
+          <li class="tecnologia">JavaScript</li>
+          <li class="tecnologia">HTML5</li>
+          <li class="tecnologia">CSS3</li>
         </ul>
       </li>
 
-      <li class="trabajo" (click)="toggleDescripcion(2)">
-        <h2 class="titulo-trabajos">APLICACIÓN 3</h2>
-        <p class="descripcion-trabajo" *ngIf="descripcionVisible[2]">
-          Una tercera app...
+      <li class="trabajo" >
+        <h2 class="titulo-trabajos"> <a class="enlace" href="https://locandstock.es">Loc&Stock</a></h2>
+        <p class="descripcion-trabajo" >
+          Landing page de empresa dedicada a servicios de localización para producción de anuncios, series y películas.
+          <br>
+          Me encargué del desarrollo siguiendo las indicaciones del cliente y en base al modelo aportado por una diseñadora UX/UI.
         </p>
-        <ul class="tecnologias-trabajo" *ngIf="descripcionVisible[2]">
-          <li class="tecnologia">Python</li>
-          <li class="tecnologia">Django</li>
+        <ul class="tecnologias-trabajo" >
+          <li class="tecnologia">Html</li>
+          <li class="tecnologia">CSS3</li>
+          <li class="tecnologia">JavaScript</li>
         </ul>
       </li>
 
